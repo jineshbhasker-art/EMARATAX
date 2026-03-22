@@ -47,14 +47,14 @@ const Login: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-[#0A192F] flex flex-col items-center justify-center p-4">
+      <div className="min-h-screen bg-brand-navy flex flex-col items-center justify-center p-4">
         <div className="flex flex-col items-center gap-6">
-          <div className="w-16 h-16 bg-[#B8860B] rounded-2xl flex items-center justify-center font-bold text-3xl text-white shadow-2xl animate-pulse">
+          <div className="w-16 h-16 bg-brand-gold rounded-2xl flex items-center justify-center font-bold text-3xl text-white shadow-2xl animate-pulse">
             E
           </div>
           <div className="flex items-center gap-3 text-white">
             <Loader2 className="animate-spin" size={24} />
-            <span className="text-lg font-medium">Authenticating with EmraTax...</span>
+            <span className="text-lg font-medium tracking-tight">Authenticating with EmraTax...</span>
           </div>
         </div>
       </div>
@@ -62,9 +62,9 @@ const Login: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#0A192F] flex flex-col items-center justify-center p-4">
+    <div className="min-h-screen bg-brand-navy flex flex-col items-center justify-center p-4">
       <div className="mb-8 flex items-center gap-3">
-        <div className="w-12 h-12 bg-[#B8860B] rounded-xl flex items-center justify-center font-bold text-2xl text-white shadow-lg shadow-[#B8860B]/20">
+        <div className="w-12 h-12 bg-brand-gold rounded-xl flex items-center justify-center font-bold text-2xl text-white shadow-lg shadow-brand-gold/20">
           E
         </div>
         <h1 className="text-3xl font-bold text-white tracking-tight">EmraTax Authority</h1>
@@ -90,7 +90,7 @@ const Login: React.FC = () => {
             >
               <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" className="w-5 h-5" />
               Sign in with Google
-              <ArrowRight size={18} className="ml-auto text-gray-300 group-hover:text-[#B8860B] group-hover:translate-x-1 transition-all" />
+              <ArrowRight size={18} className="ml-auto text-gray-300 group-hover:text-brand-gold group-hover:translate-x-1 transition-all" />
             </button>
 
             <div className="relative py-4">
@@ -113,7 +113,7 @@ const Login: React.FC = () => {
 
         <div className="p-6 bg-gray-50 border-t text-center">
           <p className="text-xs text-gray-400">
-            By signing in, you agree to our <a href="#" className="text-[#B8860B] hover:underline">Terms of Service</a> and <a href="#" className="text-[#B8860B] hover:underline">Privacy Policy</a>
+            By signing in, you agree to our <a href="#" className="text-brand-gold hover:underline">Terms of Service</a> and <a href="#" className="text-brand-gold hover:underline">Privacy Policy</a>
           </p>
         </div>
       </div>

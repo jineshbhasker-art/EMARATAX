@@ -100,7 +100,7 @@ const VATServices: React.FC = () => {
       <div className="px-6 py-3 flex items-center gap-2 text-[10px] font-bold text-gray-500 uppercase tracking-wider">
         <span>Home</span>
         <ChevronRight size={10} />
-        <span className="text-[#B8860B]">VAT Services</span>
+        <span className="text-brand-gold">VAT Services</span>
       </div>
 
       <div className="flex-1 overflow-y-auto px-6 pb-8 space-y-6">
@@ -116,7 +116,7 @@ const VATServices: React.FC = () => {
               onClick={() => setActiveTab(tab)}
               className={`px-6 py-3 text-[10px] font-bold uppercase tracking-wider whitespace-nowrap transition-all border-b-2 ${
                 activeTab === tab 
-                  ? 'border-[#B8860B] text-[#B8860B]' 
+                  ? 'border-brand-gold text-brand-gold' 
                   : 'border-transparent text-gray-500 hover:text-gray-700'
               }`}
             >
@@ -133,7 +133,7 @@ const VATServices: React.FC = () => {
               onClick={() => setActiveSubTab(tab)}
               className={`px-4 py-2 text-[10px] font-bold uppercase tracking-wider rounded transition-all ${
                 activeSubTab === tab 
-                  ? 'bg-[#0A192F] text-white' 
+                  ? 'bg-brand-navy text-white shadow-sm' 
                   : 'bg-white text-gray-500 border border-gray-200 hover:bg-gray-50'
               }`}
             >
@@ -151,22 +151,22 @@ const VATServices: React.FC = () => {
                 <input 
                   type="text" 
                   placeholder="Search returns..."
-                  className="pl-9 pr-4 py-1.5 bg-white border border-gray-200 rounded text-[11px] outline-none focus:border-[#B8860B] w-64"
+                  className="pl-9 pr-4 py-1.5 bg-white border border-gray-200 rounded text-[11px] outline-none focus:border-brand-gold w-64 transition-colors"
                 />
               </div>
-              <button className="flex items-center gap-2 px-3 py-1.5 bg-white border border-gray-200 rounded text-[11px] font-bold text-gray-600 hover:bg-gray-50">
+              <button className="flex items-center gap-2 px-3 py-1.5 bg-white border border-gray-200 rounded text-[11px] font-bold text-gray-600 hover:bg-gray-50 transition-colors">
                 <Filter size={14} />
                 Filter
               </button>
             </div>
             <div className="flex items-center gap-2">
-              <button className="flex items-center gap-2 px-3 py-1.5 bg-white border border-gray-200 rounded text-[11px] font-bold text-gray-600 hover:bg-gray-50">
+              <button className="flex items-center gap-2 px-3 py-1.5 bg-white border border-gray-200 rounded text-[11px] font-bold text-gray-600 hover:bg-gray-50 transition-colors">
                 <Download size={14} />
                 Export
               </button>
               <button 
                 onClick={() => navigate('/vat/new')}
-                className="flex items-center gap-2 px-4 py-1.5 bg-[#B8860B] text-white rounded text-[11px] font-bold hover:bg-[#9A6F09] transition-all"
+                className="flex items-center gap-2 px-4 py-1.5 bg-brand-gold text-white rounded text-[11px] font-bold hover:bg-[#9A6F09] transition-all shadow-sm"
               >
                 <Plus size={14} />
                 Add New VAT Return
@@ -219,12 +219,12 @@ const VATServices: React.FC = () => {
                     <td className="py-4 px-4 text-[11px] font-bold text-gray-900">
                       {(ret.totalVAT || 0).toLocaleString()}
                     </td>
-                    <td className="py-4 px-4 text-[11px] font-bold text-[#B8860B]">
+                    <td className="py-4 px-4 text-[11px] font-bold text-brand-gold">
                       {(ret.netVAT || 0).toLocaleString()}
                     </td>
                     <td className="py-4 px-4 text-right">
                       <div className="flex items-center justify-end gap-2">
-                        <button className="p-1.5 text-gray-400 hover:text-[#B8860B] transition-colors">
+                        <button className="p-1.5 text-gray-400 hover:text-brand-gold transition-colors">
                           <RotateCcw size={14} />
                         </button>
                         <button 
@@ -250,7 +250,7 @@ const VATServices: React.FC = () => {
                 <FileText size={32} className="text-gray-300" />
               </div>
               <p className="text-xs font-bold text-gray-500 uppercase tracking-widest">No VAT Returns Found</p>
-              <button className="mt-4 text-[10px] font-bold text-[#B8860B] hover:underline uppercase">
+              <button className="mt-4 text-[10px] font-bold text-brand-gold hover:underline uppercase transition-all">
                 Start your first filing
               </button>
             </div>

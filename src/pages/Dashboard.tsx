@@ -52,18 +52,18 @@ const Dashboard: React.FC = () => {
 
         <div className="p-6 space-y-6 overflow-y-auto">
           {/* Muwafaq Banner */}
-          <div className="bg-[#E9E4D4] border border-[#B8860B]/20 rounded p-4 flex items-center justify-between shadow-sm">
+          <div className="bg-[#E9E4D4] border border-brand-gold/20 rounded p-4 flex items-center justify-between shadow-sm">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-white rounded flex items-center justify-center">
+              <div className="w-12 h-12 bg-white rounded flex items-center justify-center shadow-sm">
                 <img src="https://picsum.photos/seed/muwafaq/40/40" alt="Muwafaq" className="w-10 h-10" referrerPolicy="no-referrer" />
               </div>
               <div className="flex flex-col">
-                <p className="text-[11px] font-bold text-gray-800">
+                <p className="text-[11px] font-bold text-gray-800 leading-relaxed">
                   Dear registrant, you are eligible to register for "Muwafaq Package" which is a package designed for small and medium business in UAE (SMEs). Learn more about the privileges of this package here.
                 </p>
               </div>
             </div>
-            <button className="px-4 py-2 bg-[#B8860B] text-white rounded text-[10px] font-bold uppercase hover:bg-[#9A6F09] transition-colors shrink-0 ml-4">
+            <button className="px-4 py-2 bg-brand-gold text-white rounded text-[10px] font-bold uppercase hover:bg-[#9A6F09] transition-all shadow-sm shrink-0 ml-4">
               Log In to Register
             </button>
           </div>
@@ -72,27 +72,27 @@ const Dashboard: React.FC = () => {
             {/* Required Actions */}
             <div className="bg-white border border-gray-200 rounded shadow-sm overflow-hidden">
               <div className="px-4 py-3 border-b border-gray-100 flex items-center gap-2 bg-gray-50/50">
-                <FileText size={14} className="text-[#B8860B]" />
-                <h3 className="text-[11px] font-bold uppercase tracking-wider text-[#0A192F]">Required Actions</h3>
+                <FileText size={14} className="text-brand-gold" />
+                <h3 className="text-[11px] font-bold uppercase tracking-wider text-brand-navy">Required Actions</h3>
               </div>
               <div className="overflow-x-auto">
                 <table className="w-full text-[10px]">
                   <thead>
                     <tr className="bg-gray-50 text-left border-b border-gray-100">
-                      <th className="px-4 py-2 font-bold text-gray-600">Due Date</th>
-                      <th className="px-4 py-2 font-bold text-gray-600">Description</th>
+                      <th className="px-4 py-2 font-bold text-gray-600 uppercase tracking-wider">Due Date</th>
+                      <th className="px-4 py-2 font-bold text-gray-600 uppercase tracking-wider">Description</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-100">
                     <tr>
-                      <td className="px-4 py-3 font-bold text-gray-900 whitespace-nowrap">• 24/02/2018</td>
-                      <td className="px-4 py-3 text-gray-700 underline cursor-pointer hover:text-[#B8860B]">
+                      <td className="px-4 py-3 font-mono font-bold text-gray-900 whitespace-nowrap">• 24/02/2018</td>
+                      <td className="px-4 py-3 text-gray-700 underline cursor-pointer hover:text-brand-gold transition-colors">
                         Trade License Number 684210 belonging to MOHAMMAD SHAFIULALAM VEGETABLES AND FRUITS TRADING L.L.C has expired.
                       </td>
                     </tr>
                     <tr>
-                      <td className="px-4 py-3 font-bold text-gray-900 whitespace-nowrap">• 19/02/2025</td>
-                      <td className="px-4 py-3 text-gray-700 underline cursor-pointer hover:text-[#B8860B]">
+                      <td className="px-4 py-3 font-mono font-bold text-gray-900 whitespace-nowrap">• 19/02/2025</td>
+                      <td className="px-4 py-3 text-gray-700 underline cursor-pointer hover:text-brand-gold transition-colors">
                         Passport Number EF0334248 belonging to MOHAMMAD BABUL ABUL BASHAR has expired.
                       </td>
                     </tr>
@@ -104,8 +104,8 @@ const Dashboard: React.FC = () => {
             {/* Most Used Services */}
             <div className="bg-white border border-gray-200 rounded shadow-sm overflow-hidden">
               <div className="px-4 py-3 border-b border-gray-100 flex items-center gap-2 bg-gray-50/50">
-                <Star size={14} className="text-[#B8860B]" />
-                <h3 className="text-[11px] font-bold uppercase tracking-wider text-[#0A192F]">Most Used Services</h3>
+                <Star size={14} className="text-brand-gold" />
+                <h3 className="text-[11px] font-bold uppercase tracking-wider text-brand-navy">Most Used Services</h3>
               </div>
               <div className="divide-y divide-gray-100">
                 {[
@@ -117,13 +117,13 @@ const Dashboard: React.FC = () => {
                   <div 
                     key={service.name} 
                     onClick={() => navigate(service.path)}
-                    className="px-4 py-3 flex items-center justify-between group cursor-pointer hover:bg-gray-50"
+                    className="px-4 py-3 flex items-center justify-between group cursor-pointer hover:bg-gray-50 transition-colors"
                   >
                     <div className="flex items-center gap-3">
-                      <Star size={14} className="text-[#B8860B]" />
-                      <span className="text-[10px] font-bold text-gray-700">{service.name}</span>
+                      <Star size={14} className="text-brand-gold" />
+                      <span className="text-[10px] font-bold text-gray-700 uppercase tracking-tight">{service.name}</span>
                     </div>
-                    <ChevronRight size={14} className="text-gray-300 group-hover:text-[#B8860B]" />
+                    <ChevronRight size={14} className="text-gray-300 group-hover:text-brand-gold transition-all" />
                   </div>
                 ))}
               </div>
@@ -145,7 +145,7 @@ const Dashboard: React.FC = () => {
                   className={cn(
                     "px-6 py-3 text-[10px] font-bold uppercase tracking-wider border-b-2 transition-all",
                     activeSubTab === tab 
-                      ? "border-[#B8860B] text-[#B8860B]" 
+                      ? "border-brand-gold text-brand-gold" 
                       : "border-transparent text-gray-500 hover:text-gray-700"
                   )}
                 >
@@ -159,13 +159,13 @@ const Dashboard: React.FC = () => {
                 <div className="overflow-x-auto">
                   <table className="w-full text-[10px]">
                     <thead>
-                      <tr className="bg-gray-50 text-left border-b border-gray-100">
-                        <th className="px-4 py-3 font-bold text-gray-600">Registration Type</th>
-                        <th className="px-4 py-3 font-bold text-gray-600">Registration Status</th>
-                        <th className="px-4 py-3 font-bold text-gray-600">TRN/WHK No.</th>
-                        <th className="px-4 py-3 font-bold text-gray-600">GIBAN</th>
-                        <th className="px-4 py-3 font-bold text-gray-600">Effective Date of Registration</th>
-                        <th className="px-4 py-3 font-bold text-gray-600 text-center">Action</th>
+                      <tr className="data-grid-header">
+                        <th className="px-4 py-3 text-left">Registration Type</th>
+                        <th className="px-4 py-3 text-left">Registration Status</th>
+                        <th className="px-4 py-3 text-left">TRN/WHK No.</th>
+                        <th className="px-4 py-3 text-left">GIBAN</th>
+                        <th className="px-4 py-3 text-left">Effective Date of Registration</th>
+                        <th className="px-4 py-3 text-center">Action</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-100">
@@ -177,19 +177,19 @@ const Dashboard: React.FC = () => {
                         { type: 'Excise Tax', status: 'Not Registered', trn: '-', giban: '-', date: '-' },
                         { type: 'Warehouse Keeper', status: 'Not Registered', trn: '-', giban: '-', date: '-' }
                       ].map((row, idx) => (
-                        <tr key={idx} className="hover:bg-gray-50">
-                          <td className="px-4 py-3 font-bold text-gray-900">{row.type}</td>
-                          <td className="px-4 py-3">
+                        <tr key={idx} className="data-grid-row">
+                          <td className="data-grid-cell font-bold text-gray-900">{row.type}</td>
+                          <td className="data-grid-cell">
                             <div className="flex items-center gap-2">
                               <div className={cn("w-2 h-2 rounded-full", row.status === 'Active' ? 'bg-green-500' : 'bg-gray-400')} />
                               <span className="font-bold text-gray-700">{row.status}</span>
                             </div>
                           </td>
-                          <td className="px-4 py-3 font-bold text-gray-700">{row.trn}</td>
-                          <td className="px-4 py-3 font-bold text-gray-700">{row.giban}</td>
-                          <td className="px-4 py-3 font-bold text-gray-700">{row.date}</td>
-                          <td className="px-4 py-3 text-center">
-                            <button className="text-gray-400 hover:text-[#B8860B]">
+                          <td className="data-grid-cell font-mono font-bold text-gray-700">{row.trn}</td>
+                          <td className="data-grid-cell font-mono font-bold text-gray-700">{row.giban}</td>
+                          <td className="data-grid-cell font-bold text-gray-700">{row.date}</td>
+                          <td className="data-grid-cell text-center">
+                            <button className="text-gray-400 hover:text-[#B8860B] transition-colors">
                               <MoreHorizontal size={16} />
                             </button>
                           </td>
@@ -203,11 +203,11 @@ const Dashboard: React.FC = () => {
               {activeSubTab === 'Taxable Person Details (!)' && (
                 <div className="p-6 space-y-8">
                   <div className="flex justify-end gap-2 mb-4">
-                    <button className="px-3 py-1.5 bg-[#0A192F] text-white text-[10px] font-bold uppercase rounded hover:bg-black transition-colors">View Amendment History</button>
-                    <button className="px-3 py-1.5 bg-[#B8860B] text-white text-[10px] font-bold uppercase rounded hover:bg-[#9A6F09] transition-colors">Change Entity Type</button>
+                    <button className="px-3 py-1.5 bg-brand-navy text-white text-[10px] font-bold uppercase rounded hover:bg-black transition-colors shadow-sm">View Amendment History</button>
+                    <button className="px-3 py-1.5 bg-brand-gold text-white text-[10px] font-bold uppercase rounded hover:bg-[#9A6F09] transition-colors shadow-sm">Change Entity Type</button>
                     <button 
                       onClick={() => showToast('Amendment process initiated. Please follow the on-screen instructions.', 'info')}
-                      className="px-3 py-1.5 bg-[#B8860B] text-white text-[10px] font-bold uppercase rounded hover:bg-[#9A6F09] transition-colors"
+                      className="px-3 py-1.5 bg-brand-gold text-white text-[10px] font-bold uppercase rounded hover:bg-[#9A6F09] transition-colors shadow-sm"
                     >
                       Amend
                     </button>
@@ -216,7 +216,7 @@ const Dashboard: React.FC = () => {
                   {/* Entity Details */}
                   <section className="border border-gray-200 rounded">
                     <div className="px-4 py-2 bg-gray-50 border-b border-gray-200 flex justify-between items-center">
-                      <h4 className="text-[11px] font-bold text-[#0A192F] uppercase">Entity Details</h4>
+                      <h4 className="text-[11px] font-bold text-brand-navy uppercase tracking-wider">Entity Details</h4>
                       <ChevronDown size={14} className="text-gray-400" />
                     </div>
                     <div className="p-4 grid grid-cols-2 gap-y-4 text-[10px]">
@@ -242,12 +242,12 @@ const Dashboard: React.FC = () => {
                   {/* Identification Details */}
                   <section className="border border-gray-200 rounded">
                     <div className="px-4 py-2 bg-gray-50 border-b border-gray-200 flex justify-between items-center">
-                      <h4 className="text-[11px] font-bold text-[#0A192F] uppercase">Identification Details</h4>
+                      <h4 className="text-[11px] font-bold text-brand-navy uppercase tracking-wider">Identification Details</h4>
                       <ChevronDown size={14} className="text-gray-400" />
                     </div>
                     <div className="p-4 space-y-6">
                       <div className="border-b border-gray-100 pb-2">
-                        <h5 className="text-[10px] font-bold text-[#B8860B] uppercase">Main License Details</h5>
+                        <h5 className="text-[10px] font-bold text-brand-gold uppercase tracking-widest">Main License Details</h5>
                       </div>
                       <div className="grid grid-cols-2 gap-y-4 text-[10px]">
                         <div>
@@ -291,7 +291,7 @@ const Dashboard: React.FC = () => {
                   {/* Contact Details */}
                   <section className="border border-gray-200 rounded">
                     <div className="px-4 py-2 bg-gray-50 border-b border-gray-200 flex justify-between items-center">
-                      <h4 className="text-[11px] font-bold text-[#0A192F] uppercase">Contact Details</h4>
+                      <h4 className="text-[11px] font-bold text-brand-navy uppercase tracking-wider">Contact Details</h4>
                       <ChevronDown size={14} className="text-gray-400" />
                     </div>
                     <div className="p-4 grid grid-cols-2 gap-y-4 text-[10px]">
@@ -309,7 +309,7 @@ const Dashboard: React.FC = () => {
                   {/* Owners List */}
                   <section className="border border-gray-200 rounded">
                     <div className="px-4 py-2 bg-gray-50 border-b border-gray-200">
-                      <h4 className="text-[11px] font-bold text-[#0A192F] uppercase">Owners List</h4>
+                      <h4 className="text-[11px] font-bold text-brand-navy uppercase tracking-wider">Owners List</h4>
                     </div>
                     <div className="overflow-x-auto">
                       <table className="w-full text-[10px]">
@@ -347,7 +347,7 @@ const Dashboard: React.FC = () => {
                   {/* Local Branch Details */}
                   <section className="border border-gray-200 rounded">
                     <div className="px-4 py-2 bg-gray-50 border-b border-gray-200">
-                      <h4 className="text-[11px] font-bold text-[#0A192F] uppercase">Local Branch Details</h4>
+                      <h4 className="text-[11px] font-bold text-brand-navy uppercase tracking-wider">Local Branch Details</h4>
                     </div>
                     <div className="p-8 text-center text-gray-400 text-[10px] font-bold uppercase">
                       No data
@@ -357,7 +357,7 @@ const Dashboard: React.FC = () => {
                   {/* Business Activities Details */}
                   <section className="border border-gray-200 rounded">
                     <div className="px-4 py-2 bg-gray-50 border-b border-gray-200">
-                      <h4 className="text-[11px] font-bold text-[#0A192F] uppercase">Business Activities Details</h4>
+                      <h4 className="text-[11px] font-bold text-brand-navy uppercase tracking-wider">Business Activities Details</h4>
                     </div>
                     <div className="overflow-x-auto">
                       <table className="w-full text-[10px]">
@@ -394,7 +394,7 @@ const Dashboard: React.FC = () => {
                   {/* Address Details */}
                   <section className="border border-gray-200 rounded">
                     <div className="px-4 py-2 bg-gray-50 border-b border-gray-200 flex justify-between items-center">
-                      <h4 className="text-[11px] font-bold text-[#0A192F] uppercase">Address Details</h4>
+                      <h4 className="text-[11px] font-bold text-brand-navy uppercase tracking-wider">Address Details</h4>
                       <ChevronDown size={14} className="text-gray-400" />
                     </div>
                     <div className="p-4 grid grid-cols-2 gap-y-4 text-[10px]">
@@ -432,7 +432,7 @@ const Dashboard: React.FC = () => {
                   {/* Authorized Signatories */}
                   <section className="border border-gray-200 rounded">
                     <div className="px-4 py-2 bg-gray-50 border-b border-gray-200 flex justify-between items-center">
-                      <h4 className="text-[11px] font-bold text-[#0A192F] uppercase">Authorized Signatories</h4>
+                      <h4 className="text-[11px] font-bold text-brand-navy uppercase tracking-wider">Authorized Signatories</h4>
                       <ChevronDown size={14} className="text-gray-400" />
                     </div>
                     <div className="overflow-x-auto">
@@ -619,14 +619,14 @@ const Dashboard: React.FC = () => {
     <div className="flex flex-col min-h-full bg-white">
       <div className="p-6 space-y-6">
         {/* Banner */}
-        <div className="bg-[#FDF8E9] border border-[#B8860B]/20 rounded p-4 flex items-center justify-between shadow-sm">
+        <div className="bg-[#FDF8E9] border border-brand-gold/20 rounded-lg p-4 flex items-center justify-between shadow-sm hover:shadow-md transition-shadow cursor-pointer group">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#B8860B]/10 rounded text-[#B8860B]">
+            <div className="p-2 bg-brand-gold/10 rounded-lg text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition-colors">
               <Briefcase size={20} />
             </div>
             <span className="text-xs font-bold text-gray-800 uppercase tracking-tight">Create New Taxable Person Profile</span>
           </div>
-          <button className="p-2 bg-[#B8860B] text-white rounded hover:bg-[#9A6F09] transition-colors">
+          <button className="p-2 bg-brand-gold text-white rounded-lg hover:bg-[#9A6F09] transition-colors shadow-sm">
             <ChevronRight size={16} />
           </button>
         </div>
@@ -634,8 +634,8 @@ const Dashboard: React.FC = () => {
         {/* Taxable Person List Section */}
         <div className="space-y-4">
           <div className="flex items-center gap-2 text-gray-800 border-b border-gray-100 pb-2">
-            <LayoutGrid size={18} className="text-[#B8860B]" />
-            <h3 className="text-xs font-bold uppercase tracking-wider">Taxable Person List</h3>
+            <LayoutGrid size={18} className="text-brand-gold" />
+            <h3 className="text-xs font-bold uppercase tracking-wider text-brand-navy">Taxable Person List</h3>
           </div>
 
           <div className="relative flex items-center">
@@ -645,9 +645,9 @@ const Dashboard: React.FC = () => {
             <input 
               type="text" 
               placeholder="Search by TRN Number or Taxable Person"
-              className="w-full pl-10 pr-32 py-2.5 bg-white border border-gray-200 rounded text-[11px] outline-none focus:border-[#B8860B]"
+              className="w-full pl-10 pr-32 py-2.5 bg-white border border-gray-200 rounded-lg text-[11px] outline-none focus:border-brand-gold transition-colors shadow-sm"
             />
-            <button className="absolute right-0 top-0 bottom-0 px-8 bg-[#0A192F] text-white text-[11px] font-bold uppercase rounded-r hover:bg-[#152A4A] transition-colors">
+            <button className="absolute right-0 top-0 bottom-0 px-8 bg-brand-navy text-white text-[11px] font-bold uppercase rounded-r-lg hover:bg-brand-navy-light transition-colors shadow-sm">
               Search
             </button>
           </div>
@@ -655,23 +655,23 @@ const Dashboard: React.FC = () => {
           {/* Taxable Person Card */}
           <div 
             onClick={() => setSelectedEntity('MOHAMMAD SHAFIULALAM VEGETABLES AND FRUITS TRADING L.L.C')}
-            className="max-w-md bg-white border border-gray-200 rounded shadow-sm overflow-hidden group hover:border-[#B8860B] transition-all cursor-pointer"
+            className="max-w-md bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden group hover:border-brand-gold hover:shadow-md transition-all cursor-pointer"
           >
             <div className="p-6 flex items-center gap-4">
-              <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-gray-400">
+              <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-gray-300 group-hover:text-brand-gold transition-colors">
                 <UserIcon size={24} />
               </div>
               <div className="flex-1">
-                <h4 className="text-[10px] font-bold text-gray-900 leading-tight uppercase">
+                <h4 className="text-[10px] font-bold text-gray-900 leading-tight uppercase tracking-tight">
                   MOHAMMAD SHAFIULALAM VEGETABLES AND FRUITS TRADING L.L.C
                 </h4>
               </div>
             </div>
             <div className="flex border-t border-gray-100">
-              <button className="flex-1 py-2 bg-[#0A192F] text-white text-[10px] font-bold uppercase hover:bg-[#152A4A] transition-colors">
+              <button className="flex-1 py-2 bg-brand-navy text-white text-[10px] font-bold uppercase hover:bg-brand-navy-light transition-colors">
                 View
               </button>
-              <button className="px-4 py-2 bg-white text-gray-400 hover:text-[#B8860B] transition-colors border-l border-gray-100">
+              <button className="px-4 py-2 bg-white text-gray-400 hover:text-brand-gold transition-colors border-l border-gray-100">
                 <MoreHorizontal size={16} />
               </button>
             </div>

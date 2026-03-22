@@ -50,7 +50,7 @@ const Sidebar: React.FC = () => {
           className={({ isActive }) => cn(
             "flex items-center gap-3 px-4 py-3 transition-colors text-[10px] font-bold uppercase tracking-wider",
             isActive && !window.location.search.includes('entity=')
-              ? "bg-[#B8860B] text-white shadow-sm" 
+              ? "bg-brand-gold text-white shadow-sm" 
               : "text-gray-700 hover:bg-gray-200"
           )}
         >
@@ -59,9 +59,9 @@ const Sidebar: React.FC = () => {
         </NavLink>
 
         {/* Active Entity Section */}
-        <div className="bg-[#B8860B] text-white px-4 py-3 flex items-center justify-between cursor-pointer">
+        <div className="bg-brand-gold text-white px-4 py-3 flex items-center justify-between cursor-pointer shadow-sm">
           <div className="flex flex-col">
-            <span className="text-[9px] font-bold opacity-80 uppercase">MOHAMMAD</span>
+            <span className="text-[9px] font-bold opacity-80 uppercase tracking-wider">MOHAMMAD</span>
             <span className="text-[10px] font-bold leading-tight">
               SHAFIULALAM VEGETABLES AND FRUITS TRADING L.L.C
             </span>
@@ -79,7 +79,7 @@ const Sidebar: React.FC = () => {
               return cn(
                 "flex items-center gap-3 px-4 py-2.5 transition-colors text-[10px] font-bold uppercase tracking-wider",
                 (isActive || isVatActive)
-                  ? "bg-[#B8860B] text-white shadow-sm" 
+                  ? "bg-brand-gold text-white shadow-sm" 
                   : "text-gray-700 hover:bg-gray-200"
               );
             }}

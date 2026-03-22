@@ -80,11 +80,11 @@ const VATReturnDetail: React.FC = () => {
     <div className="flex flex-col min-h-full bg-[#F8F9FA]">
       {/* Breadcrumbs */}
       <div className="px-6 py-2 flex items-center gap-2 text-[10px] font-bold text-gray-500 uppercase tracking-wider bg-white border-b border-gray-100">
-        <span className="cursor-pointer hover:text-[#B8860B]" onClick={() => navigate('/')}>Home</span>
+        <span className="cursor-pointer hover:text-brand-gold transition-colors" onClick={() => navigate('/')}>Home</span>
         <ChevronRight size={10} />
-        <span className="cursor-pointer hover:text-[#B8860B]" onClick={() => navigate('/vat')}>VAT</span>
+        <span className="cursor-pointer hover:text-brand-gold transition-colors" onClick={() => navigate('/vat')}>VAT</span>
         <ChevronRight size={10} />
-        <span className="cursor-pointer hover:text-[#B8860B]" onClick={() => navigate('/vat/services')}>VAT Services</span>
+        <span className="cursor-pointer hover:text-brand-gold transition-colors" onClick={() => navigate('/vat/services')}>VAT Services</span>
         <ChevronRight size={10} />
         <span className="text-gray-900">VAT 201 Return Detail</span>
       </div>
@@ -96,18 +96,18 @@ const VATReturnDetail: React.FC = () => {
               <ArrowLeft size={20} />
             </button>
             <div>
-              <h1 className="text-sm font-bold text-[#0A192F] uppercase">VAT 201 Return Detail</h1>
+              <h1 className="text-sm font-bold text-brand-navy uppercase tracking-tight">VAT 201 Return Detail</h1>
               <p className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mt-1">
                 Filing for Period: {returnDetails.period} | VAT Ref: {returnDetails.vatRef}
               </p>
             </div>
           </div>
           <div className="flex gap-2">
-            <button className="flex items-center gap-2 px-3 py-1.5 bg-white border border-gray-200 rounded text-[10px] font-bold text-gray-600 hover:bg-gray-50">
+            <button className="flex items-center gap-2 px-3 py-1.5 bg-white border border-gray-200 rounded text-[10px] font-bold text-gray-600 hover:bg-gray-50 transition-colors">
               <Printer size={14} />
               Print
             </button>
-            <button className="flex items-center gap-2 px-3 py-1.5 bg-[#B8860B] text-white rounded text-[10px] font-bold hover:bg-[#9A6F09]">
+            <button className="flex items-center gap-2 px-3 py-1.5 bg-brand-gold text-white rounded text-[10px] font-bold hover:bg-[#9A6F09] transition-colors shadow-sm">
               <Download size={14} />
               Download PDF
             </button>
@@ -115,11 +115,11 @@ const VATReturnDetail: React.FC = () => {
         </div>
 
         {/* Header Info Card */}
-        <div className="bg-white border border-gray-200 rounded shadow-sm overflow-hidden">
+        <div className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
           <div className="grid grid-cols-6 divide-x divide-gray-100">
-            <div className="p-3 bg-[#0A192F] text-white flex items-center gap-2">
+            <div className="p-3 bg-brand-navy text-white flex items-center gap-2">
               <FileText size={16} />
-              <span className="text-[10px] font-bold uppercase">Filing Status</span>
+              <span className="text-[10px] font-bold uppercase tracking-wider">Filing Status</span>
             </div>
             <div className="p-3">
               <p className="text-[8px] font-bold text-gray-400 uppercase">Current Status:</p>
@@ -132,19 +132,19 @@ const VATReturnDetail: React.FC = () => {
             </div>
             <div className="p-3">
               <p className="text-[8px] font-bold text-gray-400 uppercase">VAT Return Period:</p>
-              <p className="text-[10px] font-bold text-[#0A192F]">{returnDetails.period}</p>
+              <p className="text-[10px] font-bold text-brand-navy">{returnDetails.period}</p>
             </div>
             <div className="p-3">
               <p className="text-[8px] font-bold text-gray-400 uppercase">VAT Return Due Date:</p>
-              <p className="text-[10px] font-bold text-[#0A192F]">{returnDetails.dueDate || '30 Mar 2026'}</p>
+              <p className="text-[10px] font-bold text-brand-navy">{returnDetails.dueDate || '30 Mar 2026'}</p>
             </div>
             <div className="p-3">
               <p className="text-[8px] font-bold text-gray-400 uppercase">Total Sales (AED):</p>
-              <p className="text-[10px] font-bold text-[#0A192F]">{(returnDetails.totalSales || 0).toLocaleString(undefined, { minimumFractionDigits: 2 })}</p>
+              <p className="text-[10px] font-bold text-brand-navy">{(returnDetails.totalSales || 0).toLocaleString(undefined, { minimumFractionDigits: 2 })}</p>
             </div>
-            <div className="p-3 bg-[#B8860B]/10">
-              <p className="text-[8px] font-bold text-[#B8860B] uppercase">Net VAT Payable:</p>
-              <p className="text-[10px] font-black text-[#B8860B]">{(returnDetails.netVAT || 0).toLocaleString(undefined, { minimumFractionDigits: 2 })} AED</p>
+            <div className="p-3 bg-brand-gold/10">
+              <p className="text-[8px] font-bold text-brand-gold uppercase">Net VAT Payable:</p>
+              <p className="text-[10px] font-black text-brand-gold">{(returnDetails.netVAT || 0).toLocaleString(undefined, { minimumFractionDigits: 2 })} AED</p>
             </div>
           </div>
         </div>
@@ -193,10 +193,10 @@ const VATReturnDetail: React.FC = () => {
                       { label: 'Zero rated supplies', amount: 0, vat: 0 },
                       { label: 'Exempt supplies', amount: 0, vat: 0 }
                     ].map((item) => (
-                      <tr key={item.label} className="hover:bg-gray-50/50">
+                      <tr key={item.label} className="hover:bg-gray-50/50 transition-colors">
                         <td className="py-3 font-medium text-gray-700">{item.label}</td>
                         <td className="py-3 text-right text-gray-600">{(item.amount || 0).toLocaleString(undefined, { minimumFractionDigits: 2 })}</td>
-                        <td className="py-3 text-right font-bold text-[#0A192F]">{(item.vat || 0).toLocaleString(undefined, { minimumFractionDigits: 2 })}</td>
+                        <td className="py-3 text-right font-bold text-brand-navy">{(item.vat || 0).toLocaleString(undefined, { minimumFractionDigits: 2 })}</td>
                         <td className="py-3 text-right text-gray-400">0.00</td>
                       </tr>
                     ))}
@@ -207,18 +207,18 @@ const VATReturnDetail: React.FC = () => {
 
             {activeTab === 'NetDue' && (
               <div className="max-w-2xl mx-auto py-8 space-y-8">
-                <div className="bg-gray-50 p-8 rounded border border-gray-100 space-y-4">
+                <div className="bg-gray-50 p-8 rounded-lg border border-gray-100 space-y-4 shadow-sm">
                   <div className="flex justify-between items-center pb-4 border-b border-gray-200">
-                    <span className="text-[11px] font-bold text-gray-500 uppercase">Total Output Tax</span>
-                    <span className="text-lg font-bold text-[#0A192F]">AED {(returnDetails.netVAT || 0).toLocaleString(undefined, { minimumFractionDigits: 2 })}</span>
+                    <span className="text-[11px] font-bold text-gray-500 uppercase tracking-wider">Total Output Tax</span>
+                    <span className="text-lg font-bold text-brand-navy">AED {(returnDetails.netVAT || 0).toLocaleString(undefined, { minimumFractionDigits: 2 })}</span>
                   </div>
                   <div className="flex justify-between items-center pb-4 border-b border-gray-200">
-                    <span className="text-[11px] font-bold text-gray-500 uppercase">Total Input Tax Recoverable</span>
-                    <span className="text-lg font-bold text-[#0A192F]">AED 0.00</span>
+                    <span className="text-[11px] font-bold text-gray-500 uppercase tracking-wider">Total Input Tax Recoverable</span>
+                    <span className="text-lg font-bold text-brand-navy">AED 0.00</span>
                   </div>
                   <div className="flex justify-between items-center pt-4">
-                    <span className="text-xs font-bold text-[#B8860B] uppercase tracking-wider">Net VAT Due</span>
-                    <span className="text-2xl font-black text-[#B8860B]">AED {(returnDetails.netVAT || 0).toLocaleString(undefined, { minimumFractionDigits: 2 })}</span>
+                    <span className="text-xs font-bold text-brand-gold uppercase tracking-widest">Net VAT Due</span>
+                    <span className="text-2xl font-black text-brand-gold">AED {(returnDetails.netVAT || 0).toLocaleString(undefined, { minimumFractionDigits: 2 })}</span>
                   </div>
                 </div>
 

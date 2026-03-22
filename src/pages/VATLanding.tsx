@@ -77,9 +77,9 @@ const VATLanding: React.FC = () => {
     <div className="flex flex-col min-h-full bg-[#F8F9FA]">
       {/* Breadcrumbs */}
       <div className="px-6 py-2 flex items-center gap-2 text-[10px] font-bold text-gray-500 uppercase tracking-wider bg-white border-b border-gray-100">
-        <span className="cursor-pointer hover:text-[#B8860B]" onClick={() => navigate('/')}>Home</span>
+        <span className="cursor-pointer hover:text-brand-gold transition-colors" onClick={() => navigate('/')}>Home</span>
         <ChevronRight size={10} />
-        <span className="cursor-pointer hover:text-[#B8860B]" onClick={() => navigate('/')}>MOHAMMAD SHAFIULALAM VEGETABLES AND FRUITS TRADING L.L.C</span>
+        <span className="cursor-pointer hover:text-brand-gold transition-colors" onClick={() => navigate('/')}>MOHAMMAD SHAFIULALAM VEGETABLES AND FRUITS TRADING L.L.C</span>
         <ChevronRight size={10} />
         <span className="text-gray-900">VAT</span>
       </div>
@@ -93,9 +93,9 @@ const VATLanding: React.FC = () => {
           <input 
             type="text" 
             placeholder="Search"
-            className="w-full pl-10 pr-32 py-2.5 bg-white border border-gray-200 rounded text-[11px] outline-none focus:border-[#B8860B]"
+            className="w-full pl-10 pr-32 py-2.5 bg-white border border-gray-200 rounded text-[11px] outline-none focus:border-brand-gold transition-colors"
           />
-          <button className="absolute right-0 top-0 bottom-0 px-8 bg-[#0A192F] text-white text-[11px] font-bold uppercase rounded-r hover:bg-[#152A4A] transition-colors">
+          <button className="absolute right-0 top-0 bottom-0 px-8 bg-brand-navy text-white text-[11px] font-bold uppercase rounded-r hover:bg-brand-navy-light transition-colors shadow-sm">
             Search
           </button>
         </div>
@@ -117,29 +117,29 @@ const VATLanding: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {section.items.map((item, idx) => (
-                <div key={idx} className="bg-white border border-gray-200 rounded shadow-sm overflow-hidden flex flex-col group hover:border-[#B8860B] transition-all">
+                <div key={idx} className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden flex flex-col group hover:border-brand-gold hover:shadow-md transition-all">
                   <div className="p-4 flex-1">
                     <div className="flex justify-between items-start mb-4">
-                      <div className="w-10 h-10 bg-gray-50 rounded flex items-center justify-center text-gray-300">
+                      <div className="w-10 h-10 bg-gray-50 rounded flex items-center justify-center text-gray-300 group-hover:text-brand-gold transition-colors">
                         <FileText size={20} />
                       </div>
-                      <Star size={14} className="text-gray-300 hover:text-[#B8860B] cursor-pointer" />
+                      <Star size={14} className="text-gray-300 hover:text-brand-gold cursor-pointer transition-colors" />
                     </div>
-                    <h4 className="text-[11px] font-bold text-[#0A192F] uppercase mb-1">{item.title}</h4>
-                    {item.description && <p className="text-[10px] text-gray-500 mb-2">{item.description}</p>}
-                    {item.status && <p className="text-[9px] font-bold text-[#B8860B] uppercase">{item.status}</p>}
+                    <h4 className="text-[11px] font-bold text-brand-navy uppercase mb-1 tracking-tight">{item.title}</h4>
+                    {item.description && <p className="text-[10px] text-gray-500 mb-2 leading-relaxed">{item.description}</p>}
+                    {item.status && <p className="text-[9px] font-bold text-brand-gold uppercase tracking-wider">{item.status}</p>}
                   </div>
                     <div className="flex border-t border-gray-100">
                       <button 
                         onClick={() => item.path !== '#' && navigate(item.path)}
-                        className="flex-1 py-2 bg-[#0A192F] text-white text-[10px] font-bold uppercase hover:bg-[#152A4A] transition-colors"
+                        className="flex-1 py-2 bg-brand-navy text-white text-[10px] font-bold uppercase hover:bg-brand-navy-light transition-colors"
                       >
                         View All
                       </button>
                       {(item.title === 'My Filings' || item.title === 'VAT 311' || item.title === 'VAT Administrative Exceptions' || item.title === 'VAT 301') && (
                         <button 
                           onClick={() => navigate('/vat/new')}
-                          className="flex-1 py-2 bg-white text-[#B8860B] text-[10px] font-bold uppercase hover:bg-gray-50 transition-colors border-l border-gray-100"
+                          className="flex-1 py-2 bg-white text-brand-gold text-[10px] font-bold uppercase hover:bg-gray-50 transition-colors border-l border-gray-100"
                         >
                           Create New
                         </button>

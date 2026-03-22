@@ -33,28 +33,28 @@ const Header: React.FC = () => {
               type="text" 
               placeholder="What are you looking for?"
               onKeyDown={(e) => e.key === 'Enter' && showToast('Searching for: ' + (e.target as HTMLInputElement).value, 'info')}
-              className="w-full pl-12 pr-4 py-1.5 bg-white border border-gray-200 focus:border-[#B8860B] rounded text-[11px] outline-none"
+              className="w-full pl-12 pr-4 py-1.5 bg-white border border-gray-200 focus:border-brand-gold rounded text-[11px] outline-none transition-colors"
             />
           </div>
         </div>
 
         <div className="flex items-center gap-4">
-          <div className="flex items-center gap-2 text-gray-500 hover:text-black cursor-pointer">
+          <div className="flex items-center gap-2 text-gray-500 hover:text-black cursor-pointer transition-colors">
             <Settings size={14} />
-            <span className="text-[10px] font-bold uppercase">User Type</span>
+            <span className="text-[10px] font-bold uppercase tracking-wider">User Type</span>
           </div>
           
-          <Volume2 size={14} className="text-gray-500 cursor-pointer hover:text-black" />
-          <span className="text-[11px] font-bold text-gray-700 cursor-pointer hover:text-black">عربي</span>
+          <Volume2 size={14} className="text-gray-500 cursor-pointer hover:text-black transition-colors" />
+          <span className="text-[11px] font-bold text-gray-700 cursor-pointer hover:text-black transition-colors">عربي</span>
 
-          <div className="flex items-center bg-[#0A192F] rounded overflow-hidden">
+          <div className="flex items-center bg-brand-navy rounded overflow-hidden shadow-sm">
             <button className="p-1.5 text-white hover:bg-white/10 transition-colors border-r border-white/10">
               <Monitor size={12} />
             </button>
             <button className="p-1.5 text-white hover:bg-white/10 transition-colors text-[10px] font-bold border-r border-white/10">
               -A
             </button>
-            <button className="p-1.5 text-white bg-[#B8860B] transition-colors text-[10px] font-bold border-r border-white/10">
+            <button className="p-1.5 text-white bg-brand-gold transition-colors text-[10px] font-bold border-r border-white/10">
               A
             </button>
             <button className="p-1.5 text-white hover:bg-white/10 transition-colors text-[10px] font-bold">
